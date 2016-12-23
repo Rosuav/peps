@@ -13,10 +13,10 @@ Post-History: 12-Dec-2016
 Abstract
 ========
 
-PEP 498 introduced Literal String Interpolation (or “f-strings”).
+PEP 498 introduced Literal String Interpolation (or "f-strings").
 The expression portions of those literals however are subject to
 certain restrictions.  This PEP proposes a formal grammar lifting
-those restrictions, promoting “f-strings” to “f expressions” or f-literals.
+those restrictions, promoting "f-strings" to "f expressions" or f-literals.
 
 This PEP expands upon the f-strings introduced by PEP 498,
 so this text requires familiarity with PEP 498.
@@ -24,12 +24,12 @@ so this text requires familiarity with PEP 498.
 Terminology
 ===========
 
-This text will refer to the existing grammar as “f-strings”,
-and the proposed one as “f-literals”.
+This text will refer to the existing grammar as "f-strings",
+and the proposed one as "f-literals".
 
 Furthermore, it will refer to the ``{}``-delimited expressions in
-f-literals/f-strings as “expression portions” and the static string content
-around them as “string portions”.
+f-literals/f-strings as "expression portions" and the static string content
+around them as "string portions".
 
 Motivation
 ==========
@@ -73,7 +73,7 @@ Rationale
 .. https://mail.python.org/pipermail/python-ideas/2016-August/041727.html
 
 The restrictions mentioned in Motivation_ are non-obvious and counter-intuitive
-unless the user is familiar with the f-literals’ implementation details.
+unless the user is familiar with the f-literals' implementation details.
 
 As mentioned, a previous version of PEP 498 allowed escape sequences
 anywhere in f-strings, including as ways to encode the braces delimiting
@@ -81,8 +81,8 @@ the expression portions and in their code.  They would be expanded before
 the code is parsed, which would have had several important ramifications:
 
 #. It would not be clear to human readers which portions are Expressions
-and which are strings.  Great material for an “obfuscated/underhanded
-Python challenge”
+and which are strings.  Great material for an "obfuscated/underhanded
+Python challenge"
 #. Syntax highlighters are good in parsing nested grammar, but not
 in recognizing escape sequences.  ECMAScript 2016 (JavaScript) allows
 escape sequences in its identifiers [1]_ and the author knows of no
